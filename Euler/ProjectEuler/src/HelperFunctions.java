@@ -52,8 +52,10 @@ public class HelperFunctions {
 		}
 	}
 
-	public long factorial(long n) {
-		if (n <= 1) {
+	public static long factorial(long n) {
+		if (n == 0) {
+			return 1;
+		} else if (n <= 1) {
 			return 1;
 		}
 
@@ -81,8 +83,8 @@ public class HelperFunctions {
 		return true;
 	}
 
-	public static boolean stringMult(String inputName, String outputName, int mult)
-			throws FileNotFoundException {
+	public static boolean stringMult(String inputName, String outputName,
+			int mult) throws FileNotFoundException {
 		Scanner sc = new Scanner(new File(inputName));
 		PrintWriter pw = new PrintWriter(new File(outputName));
 
